@@ -18,8 +18,12 @@ app.use(logger("dev"));
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
 app.use(compression());
+app.use(
+  cors({
+    origin: "*", // Replace with the actual client URL
+  })
+);
 
 //start
 app.get("/", (req, res) => {
