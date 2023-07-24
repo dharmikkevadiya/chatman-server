@@ -23,7 +23,7 @@ app.use(compression());
 
 //start
 app.get("/", (req, res) => {
-  res.send("Welcome to this chatman server Apis.");
+  res.send("Welcome to this API...");
 });
 
 //routes
