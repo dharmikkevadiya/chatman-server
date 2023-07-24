@@ -42,7 +42,7 @@ const server = app.listen(PORT, (req, res) => {
 
 const io = socket(server, {
   cors: {
-    origin: "https://chat-man.vercel.app/", // Replace with the actual client URL
+    origin: "*", // Replace with the actual client URL
   },
 });
 require("./socket")(io);
